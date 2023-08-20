@@ -1,0 +1,29 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=utter_greet];
+3 [class=active, fontsize=12, label=action_civil_society_explain_working_with_omdena];
+4 [class=active, fontsize=12, label=action_civil_society_get_partners];
+5 [class=active, fontsize=12, label=action_civil_society_benefits_of_ai_enabled];
+6 [class=active, fontsize=12, label=action_civil_society_omdena_ai_platform_offer];
+7 [class=active, fontsize=12, label=action_civil_society_ai_case_studies];
+8 [class=active, fontsize=12, label=action_civil_society_get_testimonials];
+9 [class=active, fontsize=12, label=action_civil_society_explain_working_with_omdena];
+10 [class=active, fontsize=12, label=utter_civil_society_describe_successful_journey];
+11 [class="dashed active", fontsize=12, label=action_default_fallback];
+12 [class="intent active", fillcolor=lightblue, label="/greet", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 12  [class=active, key=0];
+2 -> 3  [class=active, key=NONE, label=""];
+3 -> 4  [class=active, key=NONE, label=""];
+4 -> 5  [class=active, key=NONE, label=""];
+5 -> 6  [class=active, key=NONE, label=""];
+6 -> 7  [class=active, key=NONE, label=""];
+7 -> 8  [class=active, key=NONE, label=""];
+8 -> 9  [class=active, key=NONE, label=""];
+9 -> 10  [class=active, key=NONE, label=""];
+10 -> 11  [class=active, key=NONE, label=""];
+12 -> 2  [class=active, key=0];
+}

@@ -1,0 +1,280 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - Hi!
+    - hello there!    
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+#--------------------------------------------------------------------------------#
+# Omdena specific rules
+- intent: civil_society_greet_user_by_name
+  examples: |
+      - Hello, How can I assist you today?"   
+
+- intent: civil_society_user_ask_generic
+  examples: |
+      - Can you help me?
+      - I need assistance.      
+
+- intent: civil_society_return
+  examples: |
+      - Tell me more about Omdena Civil Society.
+      - Can we talk more about Omdena's civil society initiatives?
+      - Back to Omdena Civil Society
+
+- intent: civil_society_user_ask_about_Omdena
+  examples: |
+      - What is Omdena?
+- intent: civil_society_user_ask_Omdena_mission
+  examples: |
+      - What is Omdena's mission?  
+- intent: civil_society_user_ask_Omdena_use_AI_to_solve_Problem
+  examples: |
+      - How does Omdena use AI to solve real-world problems?
+- intent: civil_society_user_ask_Omdena_projects_worked_on
+  examples: |
+      - What are some of the projects that Omdena has worked on 
+- intent: civil_society_user_ask_about_Omdena_civil_society_program
+  examples: |
+      - What is Omdena's Civil Society Program. 
+- intent: civil_society_user_ask_about_Omdena_civil_society_program_benefits
+  examples: |
+      - what are some of the benefits of this program 
+
+- intent: thanks
+  examples: |
+      - Thank you for your help!
+      - That was very helpful!
+      - I really appreciate it!
+      - You've made my day!
+
+ #Omdena civil society specific      
+#----------------------------------------------------------------------------------#
+# Append Omdena Civil Society specific Intents 
+- intent: civil_society_inform
+  examples: |
+    - What are the benefits of AI-enabled solutions?
+    - How can AI technology benefit our organization?
+    - Tell me more about the advantages of AI in civil society projects.
+    - What impact can AI bring to our NGO's initiatives?
+    - How does AI contribute to solving global issues?
+    - Can you explain the benefits of becoming AI-enabled?
+    - I want to know why AI is important for our organization.  
+
+- intent: civil_society_partners
+  examples: |
+    - Can you provide a list of some of the Civil Society Partners associated with Omdena?
+    - What are the key focus areas of Omdena's Civil Society Partnerships?
+    - How does Omdena engage with its Civil Society Partners?
+    - Aga Khan Foundation
+    - International Center for Not-for-Profit Law
+    - The Asia Foundation
+
+- intent: civil_society_benefits_of_ai_enabled
+  examples: |
+    - How can organizations benefit from becoming AI-enabled with the Omdena platform?
+    - improved efficiency
+    - increased accuracy
+    - better decision-making
+
+- intent: civil_society_omdena_platform_offer
+  examples: |
+    - What does the Omdena platform offer to organizations looking to build AI solutions?
+    - What does your AI platform offer?
+    - Can you tell me about your AI platform?
+    - What services are provided by your AI platform?
+    - Tell me more about the AI platform you have.
+    - How can I benefit from your AI platform?
+    - What are the features of your AI platform?
+    - Is your AI platform suitable for startups?
+    - Does your AI platform support healthcare projects?
+    - Can I access your AI platform for education-related projects?  
+
+- intent: civil_society_case_studies
+  examples: |
+    - Could you provide some case studies showcasing the impact of Omdena's AI-enabled solutions?
+    - Tell me about the case study "AI in Healthcare"
+    - I want to learn about the "Financial Fraud Dection" case Study
+    - Show me details of the AI case study "Predictive Maintenance in Manufacturing"
+
+- intent:  civil_society_get_testimonials
+  examples: |
+    - Can you share some testimonials from organizations that have benefited from the Omdena platform?
+    - Can you show me some testimonials from previous collaborations?
+    - I'd like to read testimonials from orgainizations that worked with Omdena
+    - Show me what people are saying about Omdena's collaborations
+
+
+- intent: civil_society_outline_key_steps
+  examples: |
+    - Outline the key steps for an NGO to become AI-enabled and leverage AI technologies to solve problems effectively.
+    - What are the specific problems that you are trying to solve with AI? 
+    - What are your organization's goals for using AI?
+    - What are the different types of AI tools and technologies available?
+    - How do you choose the right tools and technologies for your needs?
+    - How do you train your staff on AI?
+    - How do you develop an AI strategy for your organization?
+    - What are some examples of AI projects that NGOs have piloted?
+
+- intent: civil_society_explain_working_with_omdena
+  examples: |
+    - Explain the different ways of working with the organization, Omdena and the outcomes associated with each approach.
+    - How does Omdena work with NGOs?
+    - Can you tell me more about how Omdena collaborates with organizations?
+    - What are the benefits of working with Omdena?"
+    - I'm interested in learning more about how Omdena can help my NGO.
+    - That sounds interesting. What are some of the benefits of working with Omdena?"
+
+- intent: civil_society_describe_successful_journey
+  examples: |
+    - Describe the successful journey of the World Resources Institute (WRI) with Omdena, including the duration of collaboration, the number of innovation projects, products developed, funding secured, and the number of collaborators involved.
+    - Can you tell me about a successful journey of an NGO that worked with Omdena?
+    - I'm interested in learning about the success stories of NGOs that have worked with Omdena.
+    - What are some examples of how Omdena has helped NGOs to achieve their goals?
+    - I'd like to hear about a time when Omdena helped an NGO to make a real difference.
+    - I'm looking for inspiration. Can you tell me about a time when Omdena helped an NGO to solve a difficult problem?
+
+- intent: civil_society_describe_collaboration_upskilling
+  examples: |    
+    - How is Omdena collaborating with the World Resources Institute (WRI) to upskill its internal teams in AI applications and project execution?
+    - Can you tell me about how Omdena helps NGOs to upskill their staff?
+    - I'm interested in learning about the upskilling opportunities that Omdena offers to NGOs.
+    - How does Omdena help NGOs to build capacity in AI?
+    - I'd like to hear about a time when Omdena helped an NGO to upskill their staff in AI.
+    - I'm looking for ways to upskill my staff in AI. Can you tell me about Omdena's upskilling programs?
+
+
+- intent: civil_society_describe_collaboration_success
+  examples: |   
+    - How does the collaboration between Omdena and WRI contribute to the successful execution of real-world AI projects?
+    - Can you tell me about how Omdena has helped NGOs to collaborate successfully?
+    - I'm interested in learning about the success stories of NGOs that have collaborated with Omdena.
+    - What are some examples of how Omdena has helped NGOs to work together effectively?
+    - I'd like to hear about a time when Omdena helped an NGO to collaborate with another organization to achieve a common goal.
+    - I'm looking for inspiration. Can you tell me about a time when Omdena helped an NGO to collaborate with a different community to solve a problem?
+
+- intent: civil_society_contact_omdena
+  examples: |
+    - How can I contact Omdena?
+    - I'd like to learn more about how Omdena can help my NGO. How can I get in touch?
+    - I have some questions about Omdena's programs. Who can I contact?
+    - I'm interested in collaborating with Omdena on a project. How can I get started?
+    - I'd like to share my feedback with Omdena. How can I do that?
+    - Omdena civil society can be contacted through their website at https://omdena.com/civil-society/"
+
+- intent: civil_society_human_rights_partners
+  examples: |
+      - "Which organizations are Omdena's partners in the field of human rights?"
+      - "Tell me about Omdena's collaboration with human rights organizations."
+
+- intent: civil_society_environmental_sustainability_partners
+  examples: |
+      - "Can you provide a list of environmental sustainability partners associated with Omdena?"
+      - "How is Omdena contributing to environmental sustainability through AI projects?"
+
+- intent: civil_society_healthcare_access_partners
+  examples: |
+      - "Tell me about Omdena's work with healthcare organizations to improve access to healthcare using AI."
+      - "How is Omdena leveraging AI for healthcare access?"
+
+- intent: civil_society_marginalized_communities_partners
+  examples: |
+      - "Which organizations are collaborating with Omdena to empower marginalized communities?"
+      - "How is Omdena using AI to support marginalized communities?"
+
+- intent: civil_society_education_opportunities_partners
+  examples: |
+      - "Can you share examples of Omdena's collaboration with education organizations for AI-driven solutions?"
+      - "Tell me more about Omdena's work in the education sector."
+
+- intent: civil_society_global_issues_partners
+  examples: |
+      - "Which global issues are being addressed through Omdena's Civil Society Partnerships?"
+      - "How is Omdena contributing to solving global issues through AI projects?"
+

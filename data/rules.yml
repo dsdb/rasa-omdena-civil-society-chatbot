@@ -1,0 +1,68 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# # Omdena Specific Rules
+- rule: User initiates conversation about Omdena Civil Society
+  steps:
+    - intent: civil_society_greet_user_by_name
+    - action: utter_civil_society_ask_user_name
+    - action: action_civil_society_greet 
+    - action: utter_civil_society_greet_with_name     
+
+- rule: User asks a generic question
+  steps:
+    - intent: civil_society_user_ask_generic
+    - action: utter_civil_society_provide_generic_answer
+
+- rule: User returns to Omdena Civil Society topic
+  steps:
+    - intent: civil_society_return
+    - action: utter_civil_society_return
+
+- rule: User asks about Omdena
+  steps:
+    - intent: civil_society_user_ask_about_Omdena
+    - action: utter_omdena
+
+- rule: User asks about Omdena mission
+  steps:
+    - intent: civil_society_user_ask_Omdena_mission
+    - action: utter_omdena_mission
+
+- rule: User asks about Omdena use of AI to solve real world problem
+  steps:
+    - intent: civil_society_user_ask_Omdena_use_AI_to_solve_Problem
+    - action: utter_omdena_use_ai_to_solve_real_wrold_problem
+- rule: User asks about Omdena AI Projects
+  steps:
+    - intent: civil_society_user_ask_Omdena_projects_worked_on
+    - action: utter_omdena_projects
+
+- rule: User asks about Omdena Civil Society program
+  steps:
+    - intent: civil_society_user_ask_about_Omdena_civil_society_program
+    - action: utter_omdena_civil_society_program
+
+- rule: User asks about Omdena Civil Society program
+  steps:
+    - intent: civil_society_user_ask_about_Omdena_civil_society_program_benefits
+    - action: utter_omdena_civil_society_program_benefits
+
+- rule: User says thanks
+  steps:
+    - intent: thanks
+    - action: utter_thanks
+
+
+

@@ -1,0 +1,196 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet  
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet  
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+
+#Added Omdena Civil Society Specific Stories
+- story: query_civil_society_partners
+  steps:
+  - intent: civil_society_partners
+  - action: utter_civil_society_partners  
+  - slot_was_set:
+      - civil_society_partners:
+          - type: from_entity
+            entity: civil_society_partner
+  - action: action_civil_society_get_partners
+
+- story: query_civil_society_benefits_of_ai_enabled
+  steps:
+  - intent: civil_society_benefits_of_ai_enabled  
+  - action: utter_civil_society_ask_ai_benefits
+  - intent: civil_society_inform
+  - slot_was_set:
+      - civil_society_ai_benefits: "10X impact, access to global AI community and diverse AI talent"
+#  - action: action_civil_society_benefits_of_ai_enabled
+
+#utter_civil_society_benefits_of_ai_enabled
+
+- story: query_civil_society_omdena_platform_offer
+  steps:
+  - intent: civil_society_omdena_platform_offer
+  #- action: action_civil_society_omdena_platform_offer
+  - slot_was_set:
+      - civil_society_ai_platform_offer:
+          - type: from_entity
+            entity: civil_society_ai_platform_offer
+  - action: utter_civil_society_omdena_platform_offer
+
+- story: query_civil_society_case_studies
+  steps:
+  - intent: civil_society_case_studies
+  #- action: utter_civil_society_case_studies
+  - slot_was_set:
+      - civil_society_ai_case_study:
+          - type: from entity
+            entity: civil_society_ai_case_study
+  - action: action_civil_society_case_studies
+
+
+- story: query_civil_society_get_testimonials
+  steps:
+  - intent: civil_society_get_testimonials  
+  #- action: utter_civil_society_get_testimonials
+  - slot_was_set:
+      - civil_society_testimonials:
+          - type: from_entity
+            entity: civil_society_testimonials
+  - action: action_civil_society_get_testimonials
+
+
+- story: query_civil_society_outline_key_steps
+  steps:
+  - intent: civil_society_outline_key_steps
+#  - action: utter_civil_society_outline_key_steps  
+  - slot_was_set:
+      - civil_society_collaboration_steps:
+          - type: from_entity
+            entity: civil_society_collaboration_steps
+  - action: action_civil_society_outline_key_steps
+
+
+- story: query_civil_society_explain_working_with_omdena
+  steps:
+  - intent: civil_society_explain_working_with_omdena
+# - action: utter_civil_society_explain_working_with_omdena
+  - slot_was_set:
+      - civil_society_working_approach:
+          - type: from_entity
+            entity: civil_society_working_approach
+  - action: action_civil_society_explain_working_with_omdena
+
+
+- story: query_civil_society_describe_successful_journey
+  steps:
+  - intent: civil_society_describe_successful_journey
+#  - action: utter_civil_society_describe_successful_journey
+  - slot_was_set:
+      - civil_society_successful_journey:
+          - type: from_entity
+            entity: civil_society_successful_journey
+  - action: action_civil_society_describe_successful_journey
+
+- story: query_civil_society_describe_collaboration_upskilling
+  steps:
+  - intent: civil_society_describe_collaboration_upskilling
+#  - action: utter_civil_society_describe_collaboration_upskilling
+  - slot_was_set:
+      - civil_society_collaboration_upskilling:
+          - type: from_entity
+            entity: civil_society_collaboration_upskilling
+  - action: action_civil_society_describe_collaboration_upskilling
+
+
+- story: query_civil_society_describe_collaboration_success
+  steps:
+  - intent: civil_society_describe_collaboration_success
+#  - action: utter_civil_society_describe_collaboration_success
+  - slot_was_set:
+      - civil_society_collaboration_success:
+          - type: from entity
+            entity: civil_society_collaboration_success
+  - action: action_civil_society_describe_collaboration_success
+
+- story: query_civil_society_contact_omdena
+  steps:
+  - intent: civil_society_contact_omdena
+#  - action: utter_civil_society_contact_omdena
+  - slot_was_set:
+      - civil_society_contact_website:
+          - type: from_entity
+            entity: civil_society_contact_omdena
+  - action: action_civil_society_contact_omdena
+
+- story: query_civil_society_collaborative_AI_Project_with_Human_Rights_Organization
+  steps:
+  - intent: civil_society_human_rights_partners
+  - action: action_civil_society_human_rights_partners
+
+- story: query_civil_society_environmental_sustainability_partners
+  steps:
+  - intent: civil_society_environmental_sustainability_partners
+  - action: action_civil_society_environmental_sustainability_partners
+
+- story: query_civil_society_healthcare_access_partners
+  steps:
+  - intent: civil_society_healthcare_access_partners
+  - action: action_civil_society_healthcare_access_partners
+
+- story: query_civil_society_marginalized_communities_partners
+  steps:
+  - intent: civil_society_marginalized_communities_partners
+  - action: action_civil_society_marginalized_communities_partners
+
+- story: query_civil_society_education_opportunities_partners
+  steps:
+  - intent: civil_society_education_opportunities_partners
+  - action: action_civil_society_education_opportunities_partners
+
+- story: query_civil_society_global_issues_partners
+  steps:
+  - intent: civil_society_global_issues_partners
+ # - action: utter_civil_society_global_issues_partners
+  - slot_was_set:  
+      - civil_society_global_issues:
+          - type: from_entity
+            entity: civil_society_global_issues
+  - action: action_civil_society_global_issues_partners
+
+   
+  
+  
+
+  
+
+
+
+
+   
+  
+  

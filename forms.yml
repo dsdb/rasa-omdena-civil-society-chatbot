@@ -1,0 +1,11 @@
+# version: "2.0"
+
+# forms:
+#   civil_society_user_name_form:
+#     required_slots:
+#       civil_society_user_name:
+#         - type: from_text
+#           intent: civil_society_greet_user
+#         - type: from_entity
+#           entity: civil_society_user_name
+        

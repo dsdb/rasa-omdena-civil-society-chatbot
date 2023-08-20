@@ -1,0 +1,274 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm 
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge  
+  - thanks  
+  - civil_society_greet_user_by_name
+  - civil_society_user_ask_generic
+  - civil_society_user_ask_about_Omdena
+  - civil_society_user_ask_Omdena_mission
+  - civil_society_user_ask_Omdena_use_AI_to_solve_Problem
+  - civil_society_user_ask_Omdena_projects_worked_on
+  - civil_society_user_ask_about_Omdena_civil_society_program
+  - civil_society_user_ask_about_Omdena_civil_society_program_benefits
+  - civil_society_return  
+  - civil_society_inform
+  - civil_society_partners
+  - civil_society_benefits_of_ai_enabled
+  - civil_society_omdena_platform_offer
+  - civil_society_case_studies
+  - civil_society_get_testimonials
+  - civil_society_outline_key_steps
+  - civil_society_explain_working_with_omdena
+  - civil_society_describe_successful_journey
+  - civil_society_describe_collaboration_upskilling
+  - civil_society_describe_collaboration_success
+  - civil_society_contact_omdena
+  - civil_society_human_rights_partners
+  - civil_society_environmental_sustainability_partners
+  - civil_society_healthcare_access_partners
+  - civil_society_marginalized_communities_partners
+  - civil_society_education_opportunities_partners
+  - civil_society_global_issues_partners
+
+entities:
+  - civil_society_partner
+  - civil_society_ai_benefits
+  - civil_society_ai_platform_offer
+  - civil_society_ai_case_study
+  - civil_society_testimonials
+  - civil_society_collaboration_steps
+  - civil_society_working_approach
+  - civil_society_successful_journey
+  - civil_society_collaboration_upskilling
+  - civil_society_collaboration_success
+  - civil_society_contact_website
+  - civil_society_global_issues
+
+# Omedna Civil Society Specific Slots
+slots:
+  civil_society_partners:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_partner
+
+  civil_society_ai_benefits:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_ai_benefits
+
+  civil_society_ai_platform_offer:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_ai_platform_offer
+
+  civil_society_ai_case_study:   
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_ai_case_study
+
+  civil_society_testimonials:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_testimonials        
+
+  civil_society_collaboration_steps:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_collaboration_steps
+
+  civil_society_working_approach:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_working_approach
+
+  civil_society_successful_journey:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_successful_journey
+
+  civil_society_collaboration_upskilling:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_collaboration_upskilling
+
+  civil_society_collaboration_success:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_collaboration_success
+
+  civil_society_contact_website:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_contact_website
+
+  civil_society_global_issues:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    #auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: civil_society_global_issues   
+
+
+
+responses:
+  utter_greet:
+    - text: "Hello! Welcome to Omdena Civil Society, How can I help you today?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+# Omdena specific rules utters
+  # utter_civil_society_greet_user:
+  #   - text: "Hello! How can i assit you today?"
+  utter_civil_society_ask_user_name:
+    -  text: "Hello! What's you name?"
+  utter_civil_society_greet_with_name:
+    -  text: "Hello, {civil_society_user_name}! How can I assist you today?"
+    -  text: "Hi {civil_society_user_name}! How can I help?"
+
+#Omdena civil society specific 
+  utter_civil_society_partners:
+    - text: |
+            "Omdena has collaborated with over 60 Civil Society Partners, including organizations from various domains such as human rights, environmental sustainability, education, healthcare, and more. Some prominent partners include The Asia Foundation, West Africa Civil Society Institute,  European Journalism Centre, and FORUM-ASIA,Moonshot CVE among others."  
+
+ 
+  utter_civil_society_ask_ai_benefits:
+    - text: |
+            improved_efficiency: "AI can help civil society organizations to be more efficient in their operations. For example, AI can be used to automate tasks, such as data analysis and reporting."
+            increased_reach: "AI can help civil society organizations to reach a wider audience. For example, AI can be used to create personalized content and targeted messaging."
+            enhanced_decision_making: "AI can help civil society organizations to make better decisions. For example, AI can be used to analyze data and identify trends."
+            strengthened_advocacy: "AI can help civil society organizations to strengthen their advocacy efforts. For example, AI can be used to create powerful visual representations of data."
+
+  utter_civil_society_omdena_platform_offer:
+    - text: "The Omdena platform offers organizations a collaborative ecosystem for AI projects. It connects them with a global community of AI experts. Through this diverse talent pool, organizations can access valuable perspectives, knowledge, and skillsets needed to develop AI solutions tailored to their specific challenges."
+
+
+
+
+  utter_omdena:
+    - text: | 
+            "Omdena is a global non-profit organization that uses artificial intelligence (AI) to solve real-world problems. 
+  utter_omdena_mission:
+    - text: | 
+            "Omdena uses artificial intelligence (AI) to solve real-world problems."
+
+  utter_omdena_use_ai_to_solve_real_wrold_problem:
+    - text: | 
+            "Omdena connects AI experts from around the world with organizations that need help solving their problems."
+  
+  utter_omdena_projects:
+    - text: | 
+            "The organization has worked on a variety of projects, including:
+            - Developing an AI-powered tool to identify and track deforestation in the Amazon rainforest
+            - Building an AI-powered system to predict and prevent crop failure in Africa
+            - Creating an AI-powered tool to improve access to healthcare in rural India""
+
+  utter_omdena_civil_society_program:
+    - text: |
+            "Omdena civil society proram provides CSOs with access to the Omdena platform, which allows them to collaborate with a global community of AI experts to build and deploy AI solutions. Omdena Civil Society also offers CSOs training and support to help them get started with AI.
+            
+  utter_omdena_civil_society_program_benefits:
+    - text: |
+            "The program provides CSOs with access to the Omdena platform, which allows them to collaborate with a global community of AI experts to build and deploy AI solutions."
+
+  utter_civil_society_provide_generic_answer:
+    - text: "I specialized in information related to Omdena Civil Society, feel free to ask anything related to that topic, I'll do my best to assist you."
+
+  utter_civil_society_return:
+    - text: "Of Course! Let's continue our discussion about Omdena's initiatives in the Civil Society domain. How can I assist you further."
+
+  utter_thanks:
+    - text: "Happy to help!"
+#-----------------------------------------------------------------------------------------------------------------#
+
+    
+actions:
+  - action_civil_society_greet
+  - action_civil_society_get_partners
+  - action_civil_society_benefits_of_ai_enabled
+  - action_civil_society_omdena_platform_offer
+  - action_civil_society_case_studies
+  - action_civil_society_get_testimonials
+  - action_civil_society_outline_key_steps
+  - action_civil_society_explain_working_with_omdena
+  - action_civil_society_describe_successful_journey
+  - action_civil_society_describe_collaboration_upskilling
+  - action_civil_society_describe_collaboration_success
+  - action_civil_society_contact_omdena
+  - action_civil_society_human_rights_partners
+  - action_civil_society_environmental_sustainability_partners
+  - action_civil_society_healthcare_access_partners
+  - action_civil_society_marginalized_communities_partners
+  - action_civil_society_education_opportunities_partners
+  - action_civil_society_global_issues_partners
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,10 @@
+- story: test_civil_society_partners
+  steps:
+    - intent: civil_society_partners
+    - action: action_civil_society_get_partners
+    - slot_was_set:
+        - civil_society_partners:
+            - Value1
+            - Value2
+            - Value3
+    - action: utter_civil_society_partners
